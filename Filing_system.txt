@@ -1,0 +1,6 @@
+Filing System (12-17-20)
+Discovery holds the latest required version of scripts and results
+    If a directory is updated, but the update is not required in a sub-project,
+    that sub-project will not be updated in discovery
+Pycharm holds all versions of scripts and results
+Results are denoted in order by (2), (3), etc.
