@@ -2,6 +2,7 @@ from tensorflow.keras import backend as K
 from tensorflow.keras.callbacks import *
 import numpy as np
 
+
 class CyclicLR(Callback):
 	"""This callback implements a cyclical learning rate policy (CLR).
 	The method cycles the learning rate between two boundaries with
@@ -54,15 +55,14 @@ class CyclicLR(Callback):
 		scale_fn: Custom scaling policy defined by a single
 			argument lambda function, where
 			0 <= scale_fn(x) <= 1 for all x >= 0.
-			mode paramater is ignored
+			mode parameter is ignored
 		scale_mode: {'cycle', 'iterations'}.
 			Defines whether scale_fn is evaluated on
 			cycle number or cycle iterations (training
 			iterations since start of cycle). Default is 'cycle'.
 	"""
 
-	def __init__(self, base_lr=0.001, max_lr=0.006, step_size=2000., mode='triangular',
-				 gamma=1., scale_fn=None, scale_mode='cycle'):
+	def __init__(self, base_lr=0.001, max_lr=0.006, step_size=2000., mode='triangular', gamma=1., scale_fn=None, scale_mode='cycle'):
 		super(CyclicLR, self).__init__()
 
 		self.base_lr = base_lr
@@ -70,7 +70,7 @@ class CyclicLR(Callback):
 		self.step_size = step_size
 		self.mode = mode
 		self.gamma = gamma
-		if scale_fn == None:
+		if scale_fn is None:
 			if self.mode == 'triangular':
 				self.scale_fn = lambda x: 1.
 				self.scale_mode = 'cycle'
@@ -89,16 +89,16 @@ class CyclicLR(Callback):
 
 		self._reset()
 
-	def _reset(self, new_base_lr=None, new_max_lr=None,
-			   new_step_size=None):
+	def _reset(self, new_base_lr=None, new_max_lr=None, new_step_size=None):
 		"""Resets cycle iterations.
 		Optional boundary/step size adjustment.
 		"""
-		if new_base_lr != None:
+
+		if new_base_lr is not None:
 			self.base_lr = new_base_lr
-		if new_max_lr != None:
+		if new_max_lr is not None:
 			self.max_lr = new_max_lr
-		if new_step_size != None:
+		if new_step_size is not None:
 			self.step_size = new_step_size
 		self.clr_iterations = 0.
 

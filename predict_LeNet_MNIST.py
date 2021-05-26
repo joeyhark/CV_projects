@@ -1,4 +1,4 @@
-from LeNet_MNIST import LeNet
+from LRF_and_Architectures.LeNet_MNIST import LeNet
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras import backend as K
