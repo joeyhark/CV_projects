@@ -59,3 +59,4 @@ start_stop_training
 - [ ] Implement early stopping functionality without using start stop callback.
 - [ ] Implement command line arguments in all scripts to take hyperparameters, dataset, LRF option, start stop option, and early stop option as input.
 - [ ] Modularize pre-processing steps and call pre-processing based on dataset user input.
+- [ ] Add [MobileNetV2](https://arxiv.org/abs/1801.04381)
