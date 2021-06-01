@@ -53,6 +53,7 @@ start_stop_training
 `predict_VGG16_SGD(unfinished)` - aims to predict emotion classes for VGG16 and yield tabular results  
 
 **Issues/Improvements:**  
+- [ ] Add face mask detection files
 - [ ] Seperate MNIST implementations from emotion classification more explicitly.
 - [ ] Adapt scripts to `train_GoogLeNet_FERC.py` format to train and predict in one run and include learning rate finder option.
 - [ ] Organize all callbacks.
